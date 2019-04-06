@@ -8,6 +8,7 @@ import{JokesService} from 'src/app/jokes.service'
 export class AppComponent implements OnInit{
   title = 'joke-sphere';
   randomJoke:any = {};
+
 constructor(
   private Jokes :JokesService
 ){}
@@ -15,7 +16,7 @@ constructor(
     this.Jokes.getRandomCHuckNoris().subscribe(
       res=>{
         this.randomJoke = res;
-        console.log(this.randomJoke.value)       
+        console.log(this.randomJoke)       
       }
     )
   }
