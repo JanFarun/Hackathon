@@ -11,5 +11,12 @@ export class JokesService {
     return this.http.get('https://api.chucknorris.io/jokes/random');
   }
 
+  getRandomGeek(){
+    return this.http.get('https://geek-jokes.sameerkumar.website/api');
+  }
+
+  getRandomJoke(){
+    return this.http.get('https://official-joke-api.appspot.com/random_joke');
+  }
   
 }
