@@ -10,4 +10,6 @@ export class JokesService {
   getRandomCHuckNoris(){
     return this.http.get('https://api.chucknorris.io/jokes/random');
   }
+
+  
 }
