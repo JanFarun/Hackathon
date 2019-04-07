@@ -24,24 +24,25 @@ constructor(
     this.Jokes.getRandomCHuckNoris().subscribe(
       res=>{
         this.randomJokeChuck = res;
+        this.showJoke = this.randomJokeChuck.value;
       }
     )
-    this.showJoke = this.randomJokeChuck.value;
   }
   onClickMe2(){
     this.Jokes.getRandomGeek().subscribe(
       res=>{
-        this.randomJokeGeek = res;     
-      }
+        this.randomJokeGeek = res;  
+        this.showJoke = this.randomJokeGeek;   
+      }  
     )
-    this.showJoke = this.randomJokeGeek;
+    
   }
   onClickMe3(){
     this.Jokes.getRandomJoke().subscribe(
       res=>{
         this.randomJoke = res;     
+        this.showJoke = this.randomJoke.setup + " " + this.randomJoke.punchline;
       }
     )
-    this.showJoke = this.randomJoke.setup + " " + this.randomJoke.punchline;
   }
 }
