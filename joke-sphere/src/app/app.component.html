@@ -88,9 +88,15 @@
 		
 		</div>
 		<br><br>
+		<hr>
 		<h2 style='text-align:center;'>My saved jokes</h2>
-		<div *ngFor="let item of myJokes">
-			<p>{{item}}</p>
-		</div>
 		<br><br>
+		<table>
+		<ul style="list-style-type:disc;">
+		<li *ngFor="let item of myJokes" style='text-align:center;'>
+			<h5>{{item}}</h5>
+		</li>
+ 	    </ul>
+		</table>
+		<br><br><br>
 	</div>
