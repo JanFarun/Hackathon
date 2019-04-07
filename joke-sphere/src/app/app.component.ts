@@ -10,30 +10,38 @@ export class AppComponent implements OnInit{
   randomJokeChuck:any = {};
   randomJokeGeek:any = {};
   randomJoke:any = {};
+  showJoke:any = "show joke here ..."
 constructor(
   private Jokes :JokesService
 ){}
   ngOnInit(){
     //get chuck noris joke and save it to randomJokeChuck dictionary
+
+    //get random geek joke and save it to randomJokeGeek dictionary
+  }
+
+  onClickMe1(){
     this.Jokes.getRandomCHuckNoris().subscribe(
       res=>{
         this.randomJokeChuck = res;
-        console.log(this.randomJokeChuck)       
       }
     )
-    //get random geek joke and save it to randomJokeGeek dictionary
+    this.showJoke = this.randomJokeChuck.value;
+  }
+  onClickMe2(){
     this.Jokes.getRandomGeek().subscribe(
       res=>{
-        this.randomJokeGeek = res;
-        console.log(this.randomJokeGeek)       
+        this.randomJokeGeek = res;     
       }
     )
-
+    this.showJoke = this.randomJokeGeek;
+  }
+  onClickMe3(){
     this.Jokes.getRandomJoke().subscribe(
       res=>{
-        this.randomJoke = res;
-        console.log(this.randomJoke)       
+        this.randomJoke = res;     
       }
     )
+    this.showJoke = this.randomJoke.setup + " " + this.randomJoke.punchline;
   }
 }
