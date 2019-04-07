@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
   randomJoke:any = {};
   randomDadJoke:any = {};
   showJoke:any = ""
+  myJokes: any = []
 constructor(
   private Jokes :JokesService
 ){}
@@ -54,5 +55,9 @@ constructor(
         this.showJoke = this.randomDadJoke.value;
       }
     )
+  }
+  onClickMe10(){
+    this.myJokes.push(this.showJoke)
+    console.log(this.myJokes)
   }
 }

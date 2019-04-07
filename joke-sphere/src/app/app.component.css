@@ -16,8 +16,8 @@ border-bottom:2px solid #0062cc;
 .box-part{
   background:#FFF;
   border-radius:0;
-  padding:60px 10px;
-  margin:30px 0px;
+  /* padding:30px 10px; */
+  /* margin:30px 0px; */
 }
 .text{
   margin:20px 0px;
@@ -25,4 +25,15 @@ border-bottom:2px solid #0062cc;
 
 .fa{
    color:#4183D7;
+}
+h1{
+  text-align: center;
+  margin: 0 auto;
+}
+
+#logo{
+display: block;
+margin: 0 auto;
+width: 13%;
+height: 13%;
 }

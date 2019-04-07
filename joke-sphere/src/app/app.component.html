@@ -1,69 +1,78 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<img id="logo" src="../assets/jokeHat.png">
 <div class="box">
-    <div class="container">
-    <h1>JOKE SPHERE</h1>
-    <div class="row">
-      <!-- CHUCK NORRIS JOKE -->
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="box-part text-center">
-          <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
-						<div class="title">
-							<h4>Chuck Norris Joke</h4>
-						</div>
-						<button (click)="onClickMe1()">Click me!</button>
+	<div class="container">
+		<div class="row">
+			<!-- CHUCK NORRIS JOKE -->
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="box-part text-center">
+					<img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<div class="title">
+						<h4>Chuck Norris Joke</h4>
+					</div>
+					<button (click)="onClickMe1()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
-      <!-- GEEK JOKE -->
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="box-part text-center">
-          <img src="../assets/geek.jpg" alt="Avatar" style="width:100%">
-						<div class="title">
-							<h4>Geek Joke</h4>
-						</div>
-						<button (click)="onClickMe2()">Click me!</button>
+
+			<!-- GEEK JOKE -->
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="box-part text-center">
+					<img src="../assets/geek.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<div class="title">
+						<h4>Geek Joke</h4>
+					</div>
+					<button (click)="onClickMe2()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
-      <!-- RANDOM JOKE -->
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="box-part text-center">
-          <img src="../assets/random.jpg" alt="Avatar" style="width:100%">
-						<div class="title">
-							<h4>Random Joke</h4>
-						</div>
-						<button (click)="onClickMe3()">Click me!</button>
+			<!-- RANDOM JOKE -->
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="box-part text-center">
+					<img src="../assets/random.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<div class="title">
+						<h4>Random Joke</h4>
+					</div>
+					<button (click)="onClickMe3()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
-      <!-- SHOW THE JOKE-->
-      <hr><h1>{{showJoke}}</h1><hr>
-      <!-- JOKE -->
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="box-part text-center">
-          <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
-						<div class="title">
-							<h4>Dad Joke</h4>
-						</div>
-						<button (click)="onClickMe4()">Click me!</button>
+			<!-- JOKE -->
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="box-part text-center">
+					<img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<div class="title">
+						<h4>Dad Joke</h4>
+					</div>
+					<button (click)="onClickMe4()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
-      <!-- JOKE -->
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="box-part text-center">
-          <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
-						<div class="title">
-							<h4>Chuck Norris Joke</h4>
-						</div>
-						<button (click)="onClickMe1()">Click me!</button>
+			<!-- JOKE -->
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="box-part text-center">
+					<img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<div class="title">
+						<h4>Chuck Norris Joke</h4>
+					</div>
+					<button (click)="onClickMe1()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
-      <!-- JOKE -->
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="box-part text-center">
-          <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
-						<div class="title">
-							<h4>Chuck Norris Joke</h4>
-						</div>
-						<button (click)="onClickMe1()">Click me!</button>
+			<!-- JOKE -->
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="box-part text-center">
+					<img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<div class="title">
+						<h4>Chuck Norris Joke</h4>
+					</div>
+					<button (click)="onClickMe1()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
-    </div>
-</div>
+			<!-- SHOW THE JOKE-->
+			<div style="width:80%; height:20%; margin:0 auto">
+				<hr>
+				<h1>{{showJoke}}<br><br><button (click)="onClickMe10()" class="btn btn-dark">Save joke!</button></h1>
+				<hr>
+			</div>
+		</div>
+		<h2>My saved jokes</h2>
+		<div *ngFor="let item of myJokes">
+			<p>{{item}}</p>
+		</div>
+	</div>
