@@ -10,7 +10,8 @@ export class AppComponent implements OnInit{
   randomJokeChuck:any = {};
   randomJokeGeek:any = {};
   randomJoke:any = {};
-  showJoke:any = "show joke here ..."
+  randomDadJoke:any = {};
+  showJoke:any = ""
 constructor(
   private Jokes :JokesService
 ){}
@@ -31,17 +32,26 @@ constructor(
   onClickMe2(){
     this.Jokes.getRandomGeek().subscribe(
       res=>{
-        this.randomJokeGeek = res;  
-        this.showJoke = this.randomJokeGeek;   
-      }  
+        this.randomJokeGeek = res;
+        this.showJoke = this.randomJokeGeek;
+      }
     )
-    
+
   }
   onClickMe3(){
     this.Jokes.getRandomJoke().subscribe(
       res=>{
-        this.randomJoke = res;     
+        this.randomJoke = res;
         this.showJoke = this.randomJoke.setup + " " + this.randomJoke.punchline;
+      }
+    )
+  }
+
+  onClickMe4(){
+    this.Jokes.getRandomDadJoke().subscribe(
+      res=>{
+        this.randomDadJoke = res;
+        this.showJoke = this.randomDadJoke.value;
       }
     )
   }

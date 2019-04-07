@@ -18,5 +18,8 @@ export class JokesService {
   getRandomJoke(){
     return this.http.get('https://official-joke-api.appspot.com/random_joke');
   }
-  
+
+  getRandomDadJoke(){
+    return this.http.get('https://icanhazdadjoke.com');
+  }
 }

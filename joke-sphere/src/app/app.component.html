@@ -1,29 +1,69 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1>JOKE SPHERE</h1>
-<h3>Chuck Norris joke</h3>
-<button (click)="onClickMe1()">Click me!</button>
-<h3>Geek Joke</h3>
-<button (click)="onClickMe2()">Click me!</button>
-<h3>Random Joke</h3>
-<button (click)="onClickMe3()">Click me!</button>
-<h4>{{showJoke}}</h4>
-<div class="card">
-        <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
-        <div class="container">
-            <h4 class="title">Chuck Norris Jokes</h4>
-        </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="box">
+    <div class="container">
+    <h1>JOKE SPHERE</h1>
+    <div class="row">
+      <!-- CHUCK NORRIS JOKE -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
+						<div class="title">
+							<h4>Chuck Norris Joke</h4>
+						</div>
+						<button (click)="onClickMe1()">Click me!</button>
+				</div>
+			</div>
+      <!-- GEEK JOKE -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <img src="../assets/geek.jpg" alt="Avatar" style="width:100%">
+						<div class="title">
+							<h4>Geek Joke</h4>
+						</div>
+						<button (click)="onClickMe2()">Click me!</button>
+				</div>
+			</div>
+      <!-- RANDOM JOKE -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <img src="../assets/random.jpg" alt="Avatar" style="width:100%">
+						<div class="title">
+							<h4>Random Joke</h4>
+						</div>
+						<button (click)="onClickMe3()">Click me!</button>
+				</div>
+			</div>
+      <!-- SHOW THE JOKE-->
+      <hr><h1>{{showJoke}}</h1><hr>
+      <!-- JOKE -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
+						<div class="title">
+							<h4>Dad Joke</h4>
+						</div>
+						<button (click)="onClickMe4()">Click me!</button>
+				</div>
+			</div>
+      <!-- JOKE -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
+						<div class="title">
+							<h4>Chuck Norris Joke</h4>
+						</div>
+						<button (click)="onClickMe1()">Click me!</button>
+				</div>
+			</div>
+      <!-- JOKE -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:100%">
+						<div class="title">
+							<h4>Chuck Norris Joke</h4>
+						</div>
+						<button (click)="onClickMe1()">Click me!</button>
+				</div>
+			</div>
     </div>
-    <div class="card">
-        <img src="../assets/programming-jokes.jpg" alt="Avatar" style="width:100%">
-        <div class="container">
-            <h4 class="title">Programming Jokes</h4>
-        </div>
-    </div>
-    <div class="card">
-        <img src="../assets/yo-mama.png" alt="Avatar" style="width:100%">
-        <div class="container">
-            <h4 class="title">Yo Mama Jokes</h4>
-        </div>
-    </div>
-
-<router-outlet></router-outlet>
+</div>
