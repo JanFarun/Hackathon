@@ -34,12 +34,21 @@
 					<button (click)="onClickMe3()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
+			<!-- SHOW THE JOKE-->
+			<div style="width:80%; height:20%; margin:0 auto">
+				<hr>
+				<br>
+				<br>
+				<h1>{{showJoke}}<br><br><button (click)="onClickMe10()" class="btn btn-dark">Save joke!</button></h1>
+				<br>
+				<hr>
+			</div>
 			<!-- JOKE -->
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 				<div class="box-part text-center">
-					<img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<img src="../assets/programming-jokes.jpg" alt="Avatar" style="width:200px; height: 150px">
 					<div class="title">
-						<h4>Dad Joke</h4>
+						<h4>Programmer Joke</h4>
 					</div>
 					<button (click)="onClickMe4()" class="btn btn-dark">Pull one out!</button>
 				</div>
@@ -47,32 +56,29 @@
 			<!-- JOKE -->
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 				<div class="box-part text-center">
-					<img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<img src="../assets/misc.jpg" alt="Avatar" style="width:200px; height: 150px">
 					<div class="title">
-						<h4>Chuck Norris Joke</h4>
+						<h4>Misc. Joke</h4>
 					</div>
-					<button (click)="onClickMe1()" class="btn btn-dark">Pull one out!</button>
+					<button (click)="onClickMe7()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
 			<!-- JOKE -->
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 				<div class="box-part text-center">
-					<img src="../assets/chuck-norris.jpg" alt="Avatar" style="width:200px; height: 150px">
+					<img src="../assets/small_fortune teller.jpg" alt="Avatar" style="width:200px; height: 150px">
 					<div class="title">
-						<h4>Chuck Norris Joke</h4>
+						<h4>Fortune Telling Joke</h4>
 					</div>
-					<button (click)="onClickMe1()" class="btn btn-dark">Pull one out!</button>
+					<button (click)="onClickMe6()" class="btn btn-dark">Pull one out!</button>
 				</div>
 			</div>
-			<!-- SHOW THE JOKE-->
-			<div style="width:80%; height:20%; margin:0 auto">
-				<hr>
-				<h1>{{showJoke}}<br><br><button (click)="onClickMe10()" class="btn btn-dark">Save joke!</button></h1>
-				<hr>
-			</div>
+		
 		</div>
-		<h2>My saved jokes</h2>
+		<br><br>
+		<h2 style='text-align:center;'>My saved jokes</h2>
 		<div *ngFor="let item of myJokes">
 			<p>{{item}}</p>
 		</div>
+		<br><br>
 	</div>

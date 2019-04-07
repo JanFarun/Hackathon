@@ -10,7 +10,10 @@ export class AppComponent implements OnInit{
   randomJokeChuck:any = {};
   randomJokeGeek:any = {};
   randomJoke:any = {};
-  randomDadJoke:any = {};
+  randomBSJoke:any = {};
+  randomFTJoke:any = {};
+  randomMiscJoke:any = {};
+  randomProgrammingJoke:any = {};
   showJoke:any = ""
   myJokes: any = []
 constructor(
@@ -49,10 +52,48 @@ constructor(
   }
 
   onClickMe4(){
-    this.Jokes.getRandomDadJoke().subscribe(
+    this.Jokes.getProgrammingJoke().subscribe(
       res=>{
-        this.randomDadJoke = res;
-        this.showJoke = this.randomDadJoke.value;
+        this.randomProgrammingJoke = res;
+        if (typeof this.randomProgrammingJoke.delivery === 'undefined'){
+          this.showJoke = this.randomProgrammingJoke.joke;
+        }
+        else{
+        this.showJoke = this.randomProgrammingJoke.setup + " \n" +this.randomProgrammingJoke.delivery;
+        }
+      }
+    )
+  }
+
+  onClickMe5(){
+    this.Jokes.getBSJoke().subscribe(
+      res=>{
+        this.randomBSJoke = res;
+        this.showJoke = this.randomBSJoke.phrase;
+      }
+    )
+  }
+
+  onClickMe6(){
+    this.Jokes.getFTJoke().subscribe(
+      res=>{
+        this.randomFTJoke = res;
+        this.showJoke = this.randomFTJoke;
+      }
+    )
+  }
+
+  onClickMe7(){
+    this.Jokes.getMiscJoke().subscribe(
+      res=>{
+        this.randomMiscJoke = res;
+         //when the joke is in twoparts
+        if (typeof this.randomMiscJoke.delivery === 'undefined'){
+          this.showJoke = this.randomMiscJoke.joke;
+        }
+        else{
+        this.showJoke = this.randomMiscJoke.setup + " \n" +this.randomMiscJoke.delivery;
+        }
       }
     )
   }

@@ -19,7 +19,22 @@ export class JokesService {
     return this.http.get('https://official-joke-api.appspot.com/random_joke');
   }
 
-  getRandomDadJoke(){
-    return this.http.get('https://icanhazdadjoke.com');
+  getProgrammingJoke(){
+    return this.http.get('https://sv443.net/jokeapi/category/Programming');
   }
+
+  getBSJoke(){
+    return this.http.get('https://corporatebs-generator.sameerkumar.website/');
+  }
+
+  getFTJoke(){
+    return this.http.get('https://helloacm.com/api/fortune/?');
+  }
+
+  getMiscJoke(){
+    return this.http.get('https://sv443.net/jokeapi/category/Miscellaneous');
+  }
+
+
 }
+
