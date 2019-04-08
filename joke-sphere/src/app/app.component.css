@@ -10,14 +10,12 @@ color: #0062cc;
 border-bottom:2px solid #0062cc;
 }
 .box{
-  padding:60px 0px;
+  padding:10px 0px;
 }
 
 .box-part{
   background:#FFF;
   border-radius:0;
-  /* padding:30px 10px; */
-  /* margin:30px 0px; */
 }
 .text{
   margin:20px 0px;
@@ -34,6 +32,11 @@ h1{
 #logo{
 display: block;
 margin: 0 auto;
-width: 13%;
-height: 13%;
+width: 10%;
+height: 10%;
+}
+
+img{
+  width:200px; 
+  height: 150px
 }
